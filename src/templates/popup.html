@@ -1,0 +1,43 @@
+<div id="loading"><img src="../img/18px-standard-pink-btn.gif" /></div>
+<nav id="menu">
+	<a id="cookieEditor" href="#">Cookie Editor</a>
+	<a id="invalidateSession" href="#">End VS Session</a>
+
+	{{#unless isMobile}}
+		<a id="userAgent" href="#">Show Mobile View</a>
+	{{else}}
+		<a id="userAgent" href="#">Show Desktop View</a>
+	{{/unless}}
+
+	{{#unless isZIndex}}
+		<a id="zIndexMap" href="#">Show Z-Index Map</a>
+	{{else}}
+		<a id="zIndexMap" href="#">Hide Z-Index Map</a>
+	{{/unless}}
+
+	{{#unless blockDeque}}
+		<a id="deque" href="#">Disable Deque</a>
+	{{else}}
+		<a id="deque" href="#">Enable Deque</a>
+	{{/unless}}
+
+	{{#if buildID}}
+		<a id="buildInfo" data-build-id="{{buildID}}" href="#">Build Information</a>
+	{{/if}}
+
+	{{#if videos.hasVideos}}
+		{{#unless videos.playing}}
+			<a id="toggleVideo" href="#">Play Videos on Page</a>
+		{{else}}
+			<a id="toggleVideo" href="#">Pause Videos on Page</a>
+		{{/unless}}
+	{{/if}}
+</nav>
+<section id="info">
+	<section id="content">
+		{{!-- JS, like mBuildInfo, will place content here --}}
+	</section>
+	<nav>
+		<a id="back" href="#">Back</a>
+	</nav>
+</section>

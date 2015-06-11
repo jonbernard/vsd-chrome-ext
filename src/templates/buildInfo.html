@@ -1,0 +1,25 @@
+{{#unless errors}}
+	<dl>
+		<dt>Build ID</dt>
+		<dd>{{id}}</dd>
+		<dt>Build Date</dt>
+		<dd>{{formattedDate}}</dd>
+		<dt>Last Commit</dt>
+		<dd><a href="https://stash.lbidts.com/projects/ECOMM/repos/vsdweb/commits/{{id}}" target="_blank">{{displayId}}</a> by <a href="https://stash.lbidts.com/users/{{author.slug}}" target="_blank">{{author.displayName}}</a></dd>
+		<dt>Commit Message</dt>
+		<dd>{{message}}</dd>
+	</dl>
+{{else}}
+	<dl>
+		{{#each errors}}
+			<dt>Stash Error</dt>
+			<dd>{{message}}</dd>
+
+			{{#if showLoginLink}}
+				<dt></dt>
+				<dd><a href="https://stash.lbidts.com/login" target="_blank">Log In to Stash</a></dd>
+			{{/if}}
+
+		{{/each}}
+	</dl>
+{{/unless}}

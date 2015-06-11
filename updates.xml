@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+	<app appid='cmadbfjmikmdmcdapimgpehmbbajgjeo'>
+		<updatecheck codebase='http://prototype.lbidts.com/fewdproto/extensions/dev-tools/vsd-chrome-ext.crx' version='INSERT_LATEST_EXTENSION_VERSION' />
+	</app>
+</gupdate>

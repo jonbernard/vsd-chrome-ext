@@ -1,0 +1,25 @@
+<div id="cookies">
+	{{#each testVariants}}
+		<section>
+			<h3>{{id}}{{#if summery}} - {{summery}}{{/if}}</h3>
+			<div>
+				{{#each options}}<label class="radio-label" for="{{../id}}{{id}}" data-t-number="{{../id}}"{{#between ../value range.[0] range.[1]}} data-selected="true"{{/between}}>
+						<input type="radio" name="{{../id}}" id="{{../id}}{{id}}" value="{{range.[0]}}"{{#between ../value range.[0] range.[1]}} checked{{/between}}>
+						<span>{{id}}</span>
+					</label>{{/each}}
+			</div>
+		</section>
+	{{/each}}
+	{{#if eshopCountry}}
+		<section>
+			<h3>Country:</h3>
+			<div>
+				<select id="eshopCountry">
+					{{#each eshopCountry.options}}
+						<option value="{{value}}"{{#if selected}} selected=""{{/if}}>{{label}}</option>
+					{{/each}}
+				</select>
+			</div>
+		</section>
+	{{/if}}
+</div>

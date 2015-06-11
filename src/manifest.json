@@ -1,0 +1,38 @@
+{
+  "name" : "VSD Developer Tools",
+  "version" : "0.0.5",
+  "description" : "Tools for development on VSD Platform Environments.",
+  "update_url": "http://prototype.lbidts.com/fewdproto/extensions/dev-tools/updates.xml",
+  "background" : {
+    "scripts": ["script/base/global.js", "script/page/background.js"],
+    "persistent": true
+  },
+  "page_action" :
+  {
+    "default_icon" : "img/vsd-19.png",
+    "default_title" : "VSD Developer Tools",
+    "default_popup": "html/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.lbidts.com/*"],
+      "js": ["script/base/global.js", "script/page/content_script.js"],
+      "css": ["style/content_script.css"]
+    }
+  ],
+  "permissions": [
+      "webRequest",
+      "webRequestBlocking",
+      "declarativeContent",
+      "tabs",
+      "storage",
+      "https://*.lbidts.com/*",
+      "https://dm.victoriassecret.com/*"
+  ],
+  "icons" : {
+    "48" : "img/vsd-48.png",
+    "128" : "img/vsd-128.png"
+  },
+  "manifest_version": 2,
+  "minimum_chrome_version": "5.0"
+}
